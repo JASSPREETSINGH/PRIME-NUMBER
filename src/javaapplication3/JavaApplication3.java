@@ -5,6 +5,8 @@
  */
 package javaapplication3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Dell
@@ -15,7 +17,20 @@ public class JavaApplication3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        Boolean prime = true;
+        System.out.println("enter the number you want to know us prime or not?");
+        int num = in.nextInt();
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                prime = false;
+            }
+        }
+        if (prime) {
+            System.out.println("the number is prime");
+        } else {
+            System.out.println("the number is not prime");
+        }
+
     }
-    
 }
